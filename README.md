@@ -50,13 +50,13 @@ Pull the required model (e.g., mistral):
 
 ollama pull mistral
 
-4. 🧠 Preprocess Job Descriptions (Optional)
+4. 🧠 Preprocess Job Descriptions
 
 Parse and cache all job descriptions from job_description.csv:
 
 python precompute_jds.py
 
-5. 📄 Preprocess Resumes (Optional)
+5. 📄 Preprocess Resumes 
 
 Parse all resumes in data/allCV/ and insert them into the database:
 
