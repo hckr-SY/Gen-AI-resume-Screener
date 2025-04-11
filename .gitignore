@@ -2,15 +2,15 @@
 data/allCV/*.pdf
 
 # Ignore SQLite DB (optional)
-data/jobmatch.db
+# data/jobmatch.db
 
 # Ignore JD cache (if you want re-parsing)
-data/jd_cache.pkl
+# data/jd_cache.pkl
 
 # Ignore Python cache and IDE files
 __pycache__/
 *.pyc
-*.pkl
+# *.pkl
 .DS_Store
 .env
 
