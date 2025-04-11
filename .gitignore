@@ -1,0 +1,19 @@
+#Ignore all raw CVs
+data/allCV/*.pdf
+
+# Ignore SQLite DB (optional)
+data/jobmatch.db
+
+# Ignore JD cache (if you want re-parsing)
+data/jd_cache.pkl
+
+# Ignore Python cache and IDE files
+__pycache__/
+*.pyc
+*.pkl
+.DS_Store
+.env
+
+#ignoring main.py it was for testing
+main.py
+agents/jd_summarizer.py
