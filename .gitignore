@@ -17,3 +17,4 @@ __pycache__/
 #ignoring main.py it was for testing
 main.py
 agents/jd_summarizer.py
+utils.py
