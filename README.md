@@ -27,74 +27,51 @@ A Streamlit-based web application that uses Generative AI and semantic similarit
 
 ---
 
-## 🧱 Project Structure
+## 🚀 How to Run the Project
 
-project_hackathon/
-├── app.py                     # Streamlit web app
-├── precompute_jds.py          # Parses JDs via Ollama
-├── precompute_cvs.py          # ✅ Parses resumes and adds to DB
-├── requirements.txt
-├── README.md
-│
-├── agents/
-│   ├── matcher.py             # Resume-JD matcher
-│   └── cv_extractor.py        # Resume extractor using LLM
-│
-├── utils/
-│   ├── __init__.py
-│   └── jd_loader.py           # Load parsed JD cache
-│
-├── data/
-│   ├── allCV/                 # Folder with PDF resumes
-│   ├── job_description.csv    # Raw JDs
-│   ├── jd_cache.pkl           # Pre-parsed JD cache
-│   └── jobmatch.db            # Parsed resume DB
+Follow these steps to set up and run the GenAI Resume Screener on your machine:
 
-🚀 How to Run the Project
-Clone the repository
+---
 
-bash
-Copy
-Edit
+### 1. 📥 Clone the Repository
+
+```bash
 git clone https://github.com/hckr-SY/Gen-AI-resume-Screener.git
 cd Gen-AI-resume-Screener
-Install dependencies
+---
 
-Make sure you have Python 3.9+ installed.
+### 📦 2. Install Dependencies
+### Ensure you have Python 3.9+ installed.
 
-nginx
-Copy
-Edit
+```bash
 pip install -r requirements.txt
-Start Ollama (LLM must be available locally)
+---
 
-Pull and start the required model (e.g. mistral):
 
-nginx
-Copy
-Edit
+# 🤖 3. Start Ollama & Pull Model
+# Make sure Ollama is installed and running locally.
+
+# Pull the required model (e.g., mistral):
+
+```bash
 ollama pull mistral
-Make sure ollama is running in the background.
+---
 
-(Optional) Preprocess Job Descriptions
+# 🧠 4. Preprocess Job Descriptions (Optional)
+# Parse and cache all job descriptions from job_description.csv:
 
-If you want to cache parsed JDs:
-
-nginx
-Copy
-Edit
+```bash
 python precompute_jds.py
-(Optional) Preprocess Resumes
+---
 
-To parse all resumes from data/allCV/ and store them in the database:
+# 📄 5. Preprocess Resumes 
+# Parse all resumes in data/allCV/ and insert them into the database:
 
-nginx
-Copy
-Edit
+```bash
 python precompute_cvs.py
-Run the Web App
+---
 
-arduino
-Copy
-Edit
+# 🚀 6. Launch the Streamlit Web App
+```bash
 streamlit run app.py
+---
